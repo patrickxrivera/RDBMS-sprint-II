@@ -5,8 +5,19 @@ module.exports = (app, db) => {
   });
 
   app.get('/posts/:id', async (req, res) => {
-    const post = await db('posts').where('id', req.params.id);
-    res.send(post);
+    const [post] = await db('posts').where('id', req.params.id);
+    const { id, userId, text } = post;
+
+    const [user] = await db('users')
+      .where('id', userId)
+      .select('name');
+
+    const tagIds = await db('post_tags').where('postId', id);
+    const formattedTagIds = tagIds.map(({ tagId }) => tagId);
+    const tags = await db('tags').whereIn('id', formattedTagIds);
+    const tagsArray = tags.map(({ tag }) => tag);
+
+    res.send({ text, name: user.name, tags: tagsArray });
   });
 
   app.post('/posts/new/:userId', async (req, res) => {

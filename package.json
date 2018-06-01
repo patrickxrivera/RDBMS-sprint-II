@@ -19,7 +19,8 @@
     "knex": "^0.14.6",
     "nodemon": "^1.17.5",
     "pg": "^7.4.3",
-    "pg-native": "^3.0.0"
+    "pg-native": "^3.0.0",
+    "ramda": "^0.25.0"
   },
   "bugs": {
     "url": "https://github.com/pxr13/RDBMS-sprint-II/issues"
