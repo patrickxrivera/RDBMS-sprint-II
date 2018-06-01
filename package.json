@@ -1,0 +1,28 @@
+{
+  "name": "RDBMS-sprint-II",
+  "version": "1.0.0",
+  "description": "## Topics",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pxr13/RDBMS-sprint-II.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "knex": "^0.14.6",
+    "nodemon": "^1.17.5",
+    "pg": "^7.4.3",
+    "pg-native": "^3.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/pxr13/RDBMS-sprint-II/issues"
+  },
+  "homepage": "https://github.com/pxr13/RDBMS-sprint-II#readme"
+}
